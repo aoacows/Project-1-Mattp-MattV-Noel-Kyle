@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){
 var firebaseConfig = {
     apiKey: "AIzaSyBg2MC6PXSZPhoIa02CtyufqR_cj4usSK4",
     authDomain: "mattsandkyle.firebaseapp.com",
@@ -10,4 +10,23 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+//});
+
+var database = firebase.database();
+
+
+var item;
+
+$("#searchButton").on("click", function() {
+    event.preventDefault();
+    // Storing and retreiving
+    item = $("#searchInput").val().trim();
+   
+    // Pushing to database
+    database.ref().push({
+        name: item,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
+    });
+
 });
