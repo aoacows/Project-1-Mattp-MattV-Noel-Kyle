@@ -1,0 +1,35 @@
+
+.button-group{}
+#img{
+        display: block;
+        width: 60%;
+        height: 60%;
+}
+#jumbotron{
+    background-color: rgb(22, 219, 4);
+    text-align: justify-center;
+    border-width: 10px;
+    border-color: rgb(9, 61, 9);
+    border-style: solid;
+}
+#navbar{
+
+}
+#searchBtn{}
+#search-input{}
+#accordion{}
+
+#footer{}
+
+.cardMobile{}
+.card{
+    border: green
+}
+
+#jumbotron{}
+#product-table{}
+#image-group{}
+
+
+#contact-form{}
+#email{}
