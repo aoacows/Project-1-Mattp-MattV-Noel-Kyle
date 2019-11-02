@@ -1,3 +1,7 @@
+
+var effectsOf = ["indica", "sativa", "hybrid"];
+var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
+
 //$(document).ready(function(){
 var firebaseConfig = {
     apiKey: "AIzaSyBg2MC6PXSZPhoIa02CtyufqR_cj4usSK4",
