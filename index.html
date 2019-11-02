@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
    
@@ -61,8 +62,8 @@
             </form>
         </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-       <div class="container">
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+       <div class="container text-center">
          <h1 class="display-4">Strain Vain</h1>
          <hr>
          <p class="lead">Find your perfect strain with Strain Vain</p>
@@ -82,7 +83,7 @@
           <tr>
             <div class="card-group" id="card">
                 <div class="card">
-                  <img src="./images/nugnug.jpg" class="card-img-top" id="card1"alt="...">
+                  <img src="./images/nugnug.jpg" class="card-img-top" id="img"alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -90,7 +91,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="./images/Nugshots-Bud-1.jpg" class="card-img-top" alt="...">
+                  <img src="./images/Nugshots-Bud-1.jpg" class="card-img-top" id="img" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -98,7 +99,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="./images/Nugshots-Bud-2-645x800.jpg" class="card-img-top" alt="...">
+                  <img src="./images/Nugshots-Bud-2-645x800.jpg" class="card-img-top" id="img" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -106,7 +107,7 @@
                   </div>
                 </div>
                 <div class="card">
-                    <img src="./images/alien nug.jpg" class="card-img-top" alt="...">
+                    <img src="./images/alien nug.jpg" class="card-img-top" id="img" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Herb</p>
@@ -118,7 +119,7 @@
           <tr>
             <div class="card-group">
                 <div class="card">
-                  <img src="./images/happy nug.jpeg" class="card-img-top" alt="...">
+                  <img src="./images/happy nug.jpeg" class="card-img-top" id="img" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -126,7 +127,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="./images/best-weed-strains-right-now.jpg" class="card-img-top" alt="...">
+                  <img src="./images/best-weed-strains-right-now.jpg" class="card-img-top" id="img" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -134,7 +135,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img src="./images/big boy.png" class="card-img-top" alt="...">
+                  <img src="./images/big boy.png" class="card-img-top" id="img" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Herb</p>
@@ -142,7 +143,7 @@
                   </div>
                 </div>
                 <div class="card">
-                    <img src="./images/ed1.jpg" class="card-img-top" alt="...">
+                    <img src="./images/ed1.jpg" class="card-img-top" id="img" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Herb</p>
@@ -154,7 +155,7 @@
           <tr>
             <div class="card-group">
   <div class="card">
-    <img src="./images/Edibles-Pic.jpg" class="card-img-top" alt="...">
+    <img src="./images/Edibles-Pic.jpg" class="card-img-top" id="img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">Herb</p>
@@ -162,7 +163,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="./images/ed3.jpg" class="card-img-top" alt="...">
+    <img src="./images/ed3.jpg" class="card-img-top" id="img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">Herb</p>
@@ -170,7 +171,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="./images/ed4.jpg" class="card-img-top" alt="...">
+    <img src="./images/ed4.jpg" class="card-img-top" id="img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">Herb</p>
@@ -178,7 +179,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="./images/RTX439I21-1024x683.jpg" class="card-img-top" alt="...">
+    <img src="./images/RTX439I21-1024x683.jpg" class="card-img-top" id="img" alt="...">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">Herb</p>
