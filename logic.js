@@ -11,6 +11,29 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+
+  //api call for effects
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://strainapi.evanbusse.com/l8b30NU/searchdata/effects",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "PostmanRuntime/7.19.0",
+      "Accept": "*/*",
+      "Cache-Control": "no-cache",
+      "Postman-Token": "90823252-3c31-4dbb-8efc-666c71de0a39,3381737b-4250-4573-82ec-f900f6b432de",
+      "Host": "strainapi.evanbusse.com",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive",
+      "cache-control": "no-cache"
+    }
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
 //});
 
 var database = firebase.database();
