@@ -25,8 +25,13 @@ $("#searchButton").on("click", function() {
    
     // Pushing to database
     database.ref().push({
-        name: item,
+        item: item,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+    $("#searchInput").reset();
+
+});
+
+database.ref().on("child_added", function() {
 
 });
