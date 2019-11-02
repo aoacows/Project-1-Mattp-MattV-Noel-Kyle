@@ -34,6 +34,28 @@ var firebaseConfig = {
     console.log(response);
   });
 
+  //api call for Type
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://strainapi.evanbusse.com/l8b30NU/strains/search/race/RACE",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "PostmanRuntime/7.19.0",
+      "Accept": "*/*",
+      "Cache-Control": "no-cache",
+      "Postman-Token": "8fd856fa-d4d6-4e04-85cb-16c70525ef5c,2735b45a-ef60-4dfb-8c5d-547456a6c392",
+      "Host": "strainapi.evanbusse.com",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive",
+      "cache-control": "no-cache"
+    }
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
 //});
 
 var database = firebase.database();
