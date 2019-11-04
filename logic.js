@@ -1,6 +1,7 @@
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
+var database = firebase.database();
 var queryURL;
 
 //$(document).ready(function(){
@@ -35,9 +36,9 @@ var firebaseConfig = {
     }
   }
   
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+//   $.ajax(settings).done(function (response) {
+//     console.log(response);
+//   });
 
   //api call for Type
   var settings = {
@@ -57,31 +58,31 @@ var firebaseConfig = {
     }
   }
   
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+//   $.ajax(settings).done(function (response) {
+//     console.log(response);
+
 
 //});
 
-var database = firebase.database();
 
 
-function giffer(queryURL) {
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function (response) {
-      console.log(response.data)
-      for (i = 0; i < response.data.length; i++) {
-        //console.log(response.data[i].images.fixed_width_small.url)
-        //console.log(response.data[0].images.fixed_width_small.url)
-        var gifUrl = response.data[i].images.fixed_width_small_still.url;
+
+// function giffer(queryURL) {
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET"
+//     }).then(function (response) {
+//       console.log(response.data)
+//       for (i = 0; i < response.data.length; i++) {
+//         //console.log(response.data[i].images.fixed_width_small.url)
+//         //console.log(response.data[0].images.fixed_width_small.url)
+//         var gifUrl = response.data[i].images.fixed_width_small_still.url;
   
-       // [""0""].images.fixed_width_small_still
-        //console.log(gifUrl)
-        var gifImage = $("<img>");
-        gifImage.attr("src", gifUrl);
-        gifImage.attr("alt", "team");
-        $("#team-view").prepend(gifImage);
-      }
-    });
+//        // [""0""].images.fixed_width_small_still
+//         //console.log(gifUrl)
+//         var gifImage = $("<img>");
+//         gifImage.attr("src", gifUrl);
+//         gifImage.attr("alt", "team");
+//         $("#team-view").prepend(gifImage);
+//       }
+//     });
