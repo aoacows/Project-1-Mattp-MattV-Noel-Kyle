@@ -20,7 +20,7 @@ var firebaseConfig = {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://strainapi.evanbusse.com/l8b30NU/searchdata/effects",
+    "url": "http://strainapi.evanbusse.com/strainapi.evanbusse.com/EHmvq2o/strains/search/all/searchdata/effects",
     "method": "GET",
     "headers": {
       "User-Agent": "PostmanRuntime/7.19.0",
