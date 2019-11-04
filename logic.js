@@ -1,6 +1,7 @@
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
+var queryURL;
 
 //$(document).ready(function(){
 var firebaseConfig = {
@@ -65,22 +66,22 @@ var firebaseConfig = {
 var database = firebase.database();
 
 
-var item;
-
-$("#searchButton").on("click", function() {
-    event.preventDefault();
-    // Storing and retreiving
-    item = $("#searchInput").val().trim();
-   
-    // Pushing to database
-    database.ref().push({
-        item: item,
-        dateAdded: firebase.database.ServerValue.TIMESTAMP
+function giffer(queryURL) {
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      console.log(response.data)
+      for (i = 0; i < response.data.length; i++) {
+        //console.log(response.data[i].images.fixed_width_small.url)
+        //console.log(response.data[0].images.fixed_width_small.url)
+        var gifUrl = response.data[i].images.fixed_width_small_still.url;
+  
+       // [""0""].images.fixed_width_small_still
+        //console.log(gifUrl)
+        var gifImage = $("<img>");
+        gifImage.attr("src", gifUrl);
+        gifImage.attr("alt", "team");
+        $("#team-view").prepend(gifImage);
+      }
     });
-    $("#searchInput").reset();
-
-});
-
-database.ref().on("child_added", function() {
-
-});
