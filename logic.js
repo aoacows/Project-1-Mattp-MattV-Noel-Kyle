@@ -1,7 +1,11 @@
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
+<<<<<<< HEAD
 var database = firebase.database();
+=======
+var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Pepper", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Minty", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Ammonia", "Apple", "Rose", "Butter", "Honey", "Tea", "Lime", "Lavender", "Strawberry", "Mint", "Chestnut", "Tree Fruit", "Pear", "Apricot", "Peach", "Blue Cheese", "Menthol", "Coffee", "Tar", "Mango", "Pineapple", "Sage", "Vanilla", "Plum", "Violet", "Tobacco" ];
+>>>>>>> f0233da8c708c2e3ee2ce716ee8f53fa96c2cc79
 var queryURL;
 
 //$(document).ready(function(){
@@ -20,12 +24,31 @@ var firebaseConfig = {
 
   //api call for effects
   
+<<<<<<< HEAD
 
-  //api call for Type
-  var settings = {
+=======
+  var strain1 = {
     "async": true,
     "crossDomain": true,
-    "url": "http://strainapi.evanbusse.com/l8b30NU/strains/search/race/RACE",
+    "url": "https://strainapi.evanbusse.com/EHmvq2o/searchdata/flavors",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "PostmanRuntime/7.19.0",
+      "Accept": "*/*",
+      "Cache-Control": "no-cache",
+      "Postman-Token": "90823252-3c31-4dbb-8efc-666c71de0a39,3381737b-4250-4573-82ec-f900f6b432de",
+      "Host": "strainapi.evanbusse.com",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive",
+      "cache-control": "no-cache"
+    }
+  }
+>>>>>>> f0233da8c708c2e3ee2ce716ee8f53fa96c2cc79
+  //api call for Type
+  var strain2 = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://strainapi.evanbusse.com/EHmvq2o/strains/search/race/RACE",
     "method": "GET",
     "headers": {
       "User-Agent": "PostmanRuntime/7.19.0",
@@ -37,14 +60,51 @@ var firebaseConfig = {
       "Connection": "keep-alive",
       "cache-control": "no-cache"
     }
+}
+
+var strain3 = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://strainapi.evanbusse.com/EHmvq2o/searchdata/effects",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "PostmanRuntime/7.19.0",
+      "Accept": "*/*",
+      "Cache-Control": "no-cache",
+      "Postman-Token": "90823252-3c31-4dbb-8efc-666c71de0a39,3381737b-4250-4573-82ec-f900f6b432de",
+      "Host": "strainapi.evanbusse.com",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "keep-alive",
+      "cache-control": "no-cache"
+    }
   }
   
+<<<<<<< HEAD
   $.ajax(settings).done(function (response) {
      console.log(response);
 
 
 });
 
+=======
+  $.ajax(strain1, strain2, strain3).done(function (response) {
+    console.log(response);
+  });
+
+//});
+function renderButtons() {
+    $("#buton-button").empty();
+    for (i = 0; i < strainFla.length; i++){
+        var newButton = $("<button>");
+        newButton.addClass("strainFla col-5 btn btn-secondary");
+        newButton.attr("data-name", strainFla[i]);
+        newButton.html(strainFla[i]);
+        $("#buton-button").append(newButton);
+        console.log(strainFla[i]);
+    }
+}   
+renderButtons();
+>>>>>>> f0233da8c708c2e3ee2ce716ee8f53fa96c2cc79
 
 
 
