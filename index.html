@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -17,64 +16,67 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
-   
-    <script src="logic.js"></script>
 
-    <title>Strain Vein</title>
+    <title>Strain Vain</title>
 </head>
 
 <body>
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">STV</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-label="Toggle navibation">
-        <span class="navbar-toggler-icon"> </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Essentials
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Effects</a>
-                    <a class="dropdown-item" href="#">Types</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Info</a>
-                    <a class="dropdown-item" href="#">Help</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input id="searchInput" type="search" placeholder="Search" aria-label="Search">
-            <button id="searchButton" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-<div class="jumbotron jumbotron-fluid" id="jumbotron">
-   <div class="container text-center" id="jumbotron-text">
-     <h1 class="text-center">Strain Vain</h1>
-    </div>
-     <hr>
-     <div class="container text-center" id="jumbotron-text">
-      <h5 class="text-center">Find your perfect strain!</h5>
-     </div>
-     
-   
 
-</div>
-</div>    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">STV</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-label="Toggle navibation">
+            <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index2.html">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href= "index5.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Essentials
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="#">Effects</a>
+                        <a class="dropdown-item" href="#">Types</a>
+                        <a class="dropdown-item" href="#">Flavors</a>
+                               
+                        <a class="dropdown-item" href="index4.html">Effects</a>
+                        <a class="dropdown-item" href="index3.html">Types</a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Info</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchButton" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+       <div class="container text-center">
+         <h1 class="display-4">Strain Vain</h1>
+         <hr>
+         <p class="lead">Find your perfect strain with Strain Vain</p>
+         
+        
+        
+       </div>
+    
+    </div> 
+   
+    <div id="buton-button">buttons</div>
 <table class="table table-bordered" id="product-table" >
     <thead>
       <tr>
@@ -198,9 +200,9 @@
     </div>
 <footer>
 
-</footer>
-</div>
-    
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="logic.js"></script>    
 </body>
 
 </html>
