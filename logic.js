@@ -80,7 +80,7 @@ function renderButtons() {
     $("#buton-button").empty();
     for (i = 0; i < strainFla.length; i++){
         var newButton = $("<button>");
-        newButton.addClass("strainFla col-5 btn btn-secondary");
+        newButton.addClass("strainFlaBtn col-5 btn btn-secondary");
         newButton.attr("data-name", strainFla[i]);
         newButton.html(strainFla[i]);
         $("#buton-button").append(newButton);
