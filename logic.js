@@ -1,7 +1,7 @@
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
-var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Pepper", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Minty", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Ammonia", "Apple", "Rose", "Butter", "Honey", "Tea", "Lime", "Lavender", "Strawberry", "Mint", "Chestnut", "Tree Fruit", "Pear", "Apricot", "Peach", "Blue Cheese", "Menthol", "Coffee", "Tar", "Mango", "Pineapple", "Sage", "Vanilla", "Plum", "Violet", "Tobacco" ];
+var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Butter", "Mint", "Peach", "Coffee", "Mango", "Pineapple", "Vanilla", "Tobacco" ];
 var queryURL;
 
 //$(document).ready(function(){
