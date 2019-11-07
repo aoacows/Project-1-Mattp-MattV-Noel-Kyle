@@ -55,19 +55,21 @@ $("#submit").on("click", function() {
   $('form')[0].reset();
 });
  // 
+
+
 database.ref().on("value", function(snapshot){
   var value = snapshot.val()
-  console.log(value)
-  for(var key in value){
-    var email = value[key].email
-     console.log(key)
-    console.log(value[key])
-    console.log(email)
-    if (email === "hello@aol.com"){
-      console.log("valid customer")
-      console.log(value[key])
-    }
-  }
+  
+  // for(var key in value){
+  //   var username = value[key].username
+  //   //  console.log(key)
+  //   // console.log(value[key])
+  //   console.log(username)
+  //   if (username === "buckbuckfire"){
+  //     console.log("valid customer")
+  //     // console.log(value[key])
+  //   }
+  // }
 
    console.log(value)
 })
