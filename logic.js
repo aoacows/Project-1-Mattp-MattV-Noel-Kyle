@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 // var effectsOf = ["indica", "sativa", "hybrid"];
 // var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
 // var queryURL;
+=======
+
+var effectsOf = ["indica", "sativa", "hybrid"];
+var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
+var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Butter", "Mint", "Peach", "Coffee", "Mango", "Pineapple", "Vanilla", "Tobacco" ];
+var queryURL;
+>>>>>>> ff03ee4c6aa7134c413df4b85793177086e8b5ab
 
 //$(document).ready(function(){
 var firebaseConfig = {
@@ -116,6 +124,22 @@ var strain3 = {
 
 // });
 
+<<<<<<< HEAD
+=======
+//});
+function renderButtons() {
+    $("#buton-button").empty();
+    for (i = 0; i < strainFla.length; i++){
+        var newButton = $("<button>");
+        newButton.addClass("strainFlaBtn col-5 btn btn-secondary");
+        newButton.attr("data-name", strainFla[i]);
+        newButton.html(strainFla[i]);
+        $("#buton-button").append(newButton);
+        console.log(strainFla[i]);
+    }
+}   
+renderButtons();
+>>>>>>> ff03ee4c6aa7134c413df4b85793177086e8b5ab
 
 
 
