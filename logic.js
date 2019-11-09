@@ -251,6 +251,7 @@ var strain3 = {
     "Connection": "keep-alive",
     "cache-control": "no-cache"
   }
+}
 
   
   $.ajax(strain3).done(function (response) {
