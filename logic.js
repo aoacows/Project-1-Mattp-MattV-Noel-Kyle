@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 // var effectsOf = ["indica", "sativa", "hybrid"];
 // var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
 // var queryURL;
-=======
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
-var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Butter", "Mint", "Peach", "Coffee", "Mango", "Pineapple", "Vanilla", "Tobacco" ];
+var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Butter", "Mint", "Peach", "Coffee", "Mango", "Pineapple", "Vanilla", "Tobacco"];
 var queryURL;
->>>>>>> ff03ee4c6aa7134c413df4b85793177086e8b5ab
+// ff03ee4c6aa7134c413df4b85793177086e8b5ab
+
 
 //$(document).ready(function(){
 var firebaseConfig = {
@@ -30,11 +29,27 @@ var userName;
 var city;
 var state;
 var zipCode;
+
+
+function checkUser() {
+  firebase.database().ref().orderByChild("userName").equalTo(userName).on("value", function (snapshot) {
+
+    if (snapshot.exists()) {
+      console.log("exists");
+      return true;
+    } else {
+      console.log("doesn't exist");
+      return false;
+
+    }
+
+  });
+}
 // use this to push or add data
 // database.ref().push($("#firstName")) 
 // console.log($("#firstName"), database)
 
-$("#submit").on("click", function() {
+$("#submit").on("click", function () {
   event.preventDefault();
   // Storing and retreiving new train data
   firstName = $("#firstName").val().trim();
@@ -50,37 +65,56 @@ $("#submit").on("click", function() {
   zipCode = $("#zipCode").val().trim();
   console.log(zipCode)
 
-  // Pushing to database
-  database.ref().push({
-      firstName: firstName,
-      lastName: lastName,
-      userName: userName,
-      city: city,
-      state: state,
-      zipCode: zipCode,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
-  });
-  $('form')[0].reset();
+  checkUser().then(function (response) {
+    if (response === true) {
+      console.log("work")
+    } else {
+      console.log("dontwork")
+    }
+  })
+
+
+
+
+
 });
- // 
 
 
-database.ref().on("value", function(snapshot){
-  var value = snapshot.val()
-  
-  // for(var key in value){
-  //   var username = value[key].username
-  //   //  console.log(key)
-  //   // console.log(value[key])
-  //   console.log(username)
-  //   if (username === "buckbuckfire"){
-  //     console.log("valid customer")
-  //     // console.log(value[key])
-  //   }
-  // }
 
-   console.log(value)
-})
+
+
+// // Pushing to database
+//  database.ref().push({
+//     firstName: firstName,
+//     lastName: lastName,
+//     userName: userName,
+//     city: city,
+//     state: state,
+//     zipCode: zipCode,
+//     dateAdded: firebase.database.ServerValue.TIMESTAMP
+// });
+
+// });
+
+// 
+
+
+// database.ref().on("value", function(snapshot){
+// var value = snapshot.val()
+
+// for(var key in value){
+//   var username = value[key].username
+//   //  console.log(key)
+//   // console.log(value[key])
+//   console.log(username)
+//   if (username === "buckbuckfire"){
+//     console.log("valid customer")
+//     // console.log(value[key])
+//   }
+// }
+
+//  console.log(value)
+// })
 //api call for effects
 
 //api call for Type
@@ -118,28 +152,26 @@ var strain3 = {
   }
 }
 
+
 // $.ajax(settings).done(function (response) {
 //   console.log(response);
 
 
-// });
+//  });
 
-<<<<<<< HEAD
-=======
-//});
-function renderButtons() {
-    $("#buton-button").empty();
-    for (i = 0; i < strainFla.length; i++){
-        var newButton = $("<button>");
-        newButton.addClass("strainFlaBtn col-5 btn btn-secondary");
-        newButton.attr("data-name", strainFla[i]);
-        newButton.html(strainFla[i]);
-        $("#buton-button").append(newButton);
-        console.log(strainFla[i]);
-    }
-}   
-renderButtons();
->>>>>>> ff03ee4c6aa7134c413df4b85793177086e8b5ab
+// });
+// function renderButtons() {
+//     $("#buton-button").empty();
+//     for (i = 0; i < strainFla.length; i++){
+//         var newButton = $("<button>");
+//         newButton.addClass("strainFlaBtn col-5 btn btn-secondary");
+//         newButton.attr("data-name", strainFla[i]);
+//         newButton.html(strainFla[i]);
+//         $("#buton-button").append(newButton);
+//         console.log(strainFla[i]);
+//     }
+// }   
+// renderButtons();
 
 
 
