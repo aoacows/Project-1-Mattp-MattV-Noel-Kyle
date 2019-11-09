@@ -87,6 +87,7 @@ body{
     color: black;
     background-color: transparent;
     border: 2px solid rgb(0, 0, 0);
+
     width:80px;
     height: 80px;
     display: inline-block;
@@ -97,4 +98,5 @@ body{
     display: block;
         width:50px;
         height: 50px;
+
 }
