@@ -4,7 +4,108 @@
 
 var effectsOf = ["indica", "sativa", "hybrid"];
 var typeOf = ["happy", "sad", "negative", "positive", "energetic"];
-var strainFla = ["Earthy", "Chemical", "Pine", "Spicy/Herbal", "Pungent", "Flowery", "Citrus", "Orange", "Sweet", "Skunk", "Grape", "Woody", "Cheese", "Diesel", "Tropical", "Grapefruit", "Nutty", "Lemon", "Berry", "Blueberry", "Butter", "Mint", "Peach", "Coffee", "Mango", "Pineapple", "Vanilla", "Tobacco"];
+
+var strainFla = [
+  {name:"Earthy",
+  image: './images/button_img/earthy.jpg'
+}, 
+  //{name:"Chemical",
+  //image: './images/button_img/marijane_filler.jpg'},
+  {name:"Pine",
+  image: './images/button_img/pines.png'},
+  {name:"Spicy/Herbal",
+  image: './images/button_img/spicy.png' },
+  {name:"Pungent",
+  image: './images/button_img/pungent.jpg'},
+  {name:"Pepper",
+  image:'./images/button_img/pepper.png'},
+  {name:"Flowery",
+  image: './images/button_img/flower-clipart-11.jpg'},
+  {name:"Citrus",
+  image:'./images/button_img/citrus.jpg'}, 
+  {name:"Orange",
+  image:'./images/button_img/orange.png'}, 
+  {name:"Sweet",
+  image:'./images/button_img/sweet.png'}, 
+  {name:"Skunk",
+  image:'./images/button_img/skunk.gif'}, 
+  {name:"Grape",
+  image:'./images/button_img/grape.png'}, 
+  {name:"Minty",
+  image: './images/button_img/mint.jpg'},
+  {name:"Woody",
+  image: './images/button_img/woody.jps'},
+  {name:"Cheese",
+  image:'./images/button_img/cheese-clipart-transparent-14.png'}, 
+  {name:"Diesel",
+  image:'./images/button_img/diesel.png'},
+  {name:"Tropical",
+  image: './images/button_img/tropical.jpg'}, 
+  {name:"Grapefruit",
+  image:'./images/button_img/grapefruit.png'},
+  {name:"Nutty",
+  image: './images/button_img/nutty.png'}, 
+  {name:"Lemon",
+  image: './images/button_img/lemon-clip-art-24.jpg'},
+  {name:"Berry",
+  image: './images/button_img/strawberry-clipart-transparent-background-25.png'},
+  {name:"Blueberry",
+  image:'./images/button_img/blueberry.png'},
+  {name:"Ammonia",
+  image:'./images/button_img/marijane_filler.jpg'},
+  {name:"Apple",
+  image:'./images/button_img/apple.png'},
+  {name:"Rose",
+  image:'./images/button_img/roses-clipart-8.jpg'},
+  {name:"Butter",
+  image:'./images/button_img/butter.gif'}, 
+  {name:"Honey",
+  image:'./images/button_img/honey.png'},
+  {name:"Tea",
+  image:'./images/button_img/green-tea-transparent-17.png'},
+  {name:"Lime",
+  image:'./images/button_img/lime.jpg'},
+  {name:"Lavender",
+  image:'./images/button_img/lavenders.jpg'},
+  {name:"Strawberry",
+  image:'./images/button_img/strawberry.jpg'},
+  {name:"Mint",
+  image:'./images/button_img/mint.jpg'}, 
+  {name:"Chestnut",
+  image: './images/button_img/chestnut.png'}, 
+  {name:"Tree Fruit",
+  image: './images/button_img/marijane_filler.jpg'},
+  {name:"Pear",
+  image: './images/button_img/pear.png'},
+  {name:"Apricot",
+  image: './images/button_img/marijane_filler.jpg'}, 
+  {name:"Peach",
+  image: './images/button_img/peach-clip-art-9.png'},
+  {name:"Blue Cheese",
+  image: './images/button_img/marijane_filler.jpg'},
+  {name:"Menthol",
+  image: './images/button_img/marijane_filler.jpg'},
+  {name:"Coffee",
+  image: './images/button_img/coffee.png'},
+  {name:"Tar",
+  image:'./images/button_img/marijane_filler.jpg'},
+  {name:"Mango",
+  image: './images/button_img/mango-clipart-8.jpg'}, 
+  {name:"Pineapple",
+  image:'./images/button_img/pineapple.png'}, 
+  {name:"Sage",
+  image: './images/button_img/marijane_filler.jpg'}, 
+  {name:"Vanilla",
+  image: './images/button_img/vanilla.jpg'},
+  {name:"Plum",
+  image:'./images/button_img/marijane_filler.jpg'},
+  {name:"Violet",
+  image:'./images/button_img/marijane_filler.jpg'},
+  {name:"Tobacco",
+  image: './images/button_img/tobacco.jpg'} ];
+
+
+
 var queryURL;
 // ff03ee4c6aa7134c413df4b85793177086e8b5ab
 
@@ -150,7 +251,28 @@ var strain3 = {
     "Connection": "keep-alive",
     "cache-control": "no-cache"
   }
-}
+
+  
+  $.ajax(strain3).done(function (response) {
+    console.log(response);
+  });
+ // strain2, strain3
+//});
+function renderButtons() {
+    $("#buton-button").empty();
+    for (i = 0; i < strainFla.length; i++){
+        var newButton = $("<button>");
+        var newButtonImg = $("<img>");
+        newButton.addClass("strainFla col-5 btn btn-toggle");
+        newButton.attr("data-name", strainFla[i].name);
+        newButtonImg.attr("src",strainFla[i].image);
+        newButtonImg.attr("id","button-img")
+        newButton.append(newButtonImg);
+        $("#buton-button").append(newButton);
+        console.log(strainFla[i]);
+    }
+}   
+renderButtons();
 
 
 // $.ajax(settings).done(function (response) {
